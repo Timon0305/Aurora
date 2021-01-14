@@ -14,6 +14,7 @@ let mainWindow;
 let authWindow;
 let versionNumber = app.getVersion();
 
+// Creating Main Page
 const createWindow = () => {
   mainWindow = new BrowserWindow({
     width: 1516,
@@ -52,6 +53,7 @@ const auth = () => {
   }
 };
 
+// Creating Login Page
 const createAuth = () => {
   authWindow = new BrowserWindow({
     parent: mainWindow,

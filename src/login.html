@@ -13,7 +13,6 @@
 		<link href="assets/plugins/ionicons/css/ionicons.min.css" rel="stylesheet">
 		<link href="assets/plugins/typicons.font/typicons.css" rel="stylesheet">
 		<link href="assets/plugins/feather/feather.css" rel="stylesheet">
-		<link href="assets/plugins/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
 		<link href="assets/css/style.css" rel="stylesheet">
 		<link href="assets/css/custom-style.css" rel="stylesheet">
 		<link href="assets/css/skins.css" rel="stylesheet">
@@ -47,9 +46,13 @@
 															<form>
 																<div class="form-group text-left mb-4">
 																	<label class="12">Licence Key</label>
-																	<input class="form-control" placeholder="Enter Licence Key" type="text">
+																	<input class="form-control"
+																		   placeholder="Enter Licence Key"
+																		   type="text"
+																		   id="auth-input"
+																	>
 																</div>
-																<button class="btn ripple btn-pink btn-md btn-block">
+																<button class="btn ripple btn-pink btn-md btn-block" id="auth-button">
 																	<i class="fe fe-check-circle"></i>&nbsp; Login to Aurora
 																</button>
 															</form>
@@ -75,5 +78,14 @@
 			</div>
 
 		</div>
+		<script>
+			let $ = require('jquery');
+			const ipc = require('electron').ipcRenderer;
+
+			$('#auth-button').on('click', () => {
+			    let key = $('#auth-input').val();
+			    ipc.send('attempt-auth', key);
+			});
+		</script>
 	</body>
 </html>
