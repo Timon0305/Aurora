@@ -1,0 +1,39 @@
+.login-body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-image: url("../img/svgs/login-back.svg")!important;
+}
+.main-content-app-c {
+    height: 100vh!important;
+}
+.pl-0-c {
+    padding-left: 0!important;
+}
+.pr-0-c {
+    padding-right: 0!important;
+}
+.container-fluid-c {
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+.custom-card-c {
+    margin-bottom: 0!important;
+}
+.side-background {
+linear-gradient(180deg, rgba(132, 18, 230, 0.0155775) 0.46%, rgba(154, 15, 196, 0.0915877) 13.36%, rgba(184, 11, 152, 0.2) 31.75%, rgba(165, 38, 153, 0.3044) 40.66%, rgba(126, 95, 156, 0.5407) 60.82%, rgba(98, 136, 157, 0.7439) 78.15%, rgba(80, 161, 159, 0.9035) 91.77%, #4AAA9F 100%)
+}
+.btn-pink {
+    background: linear-gradient(92.19deg, rgba(255, 60, 173, 0.75) 0%, rgba(233, 7, 138, 0.75) 100%);
+}
+.d-table-c {
+    width: 100%;
+}
+.vertical-middle {
+    vertical-align: middle;
+    height: 60vh;
+}
+.login-bottom {
+    position: absolute;
+    bottom: 3%;
+    width: 100%;
+}

@@ -1,39 +1,79 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Login Page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./css/auth.css" />
-    <link rel="stylesheet" href="./css/drag.css" />
-  </head>
-  <style>
-    body {
-      overflow-x: hidden;
-    }
-  </style>
-  <body>
-    <div class="drag-region"></div>
-    <div id="authbody">
-      <div id="auth-drag" class="drag"></div>
-      <img alt="logo" id="auth-img" src="./images/logo.png" />
-      <input type="text" id="auth-input" placeholder="Key" />
-      <button id="auth-button">Activate</button>
-      <div id="auth-error"></div>
-    </div>
-    <script>
-      let $ = require("jquery");
-      const ipc = require("electron").ipcRenderer;
+<html lang="en">
+	<head>
 
-      $("#auth-button").on("click", () => {
-        let key = $("#auth-input").val();
-        ipc.send("attempt-auth", key);
-      });
+		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+		<meta name="description" content="Dashlead -  Admin Panel HTML Dashboard Template">
+		<meta name="author" content="Spruko Technologies Private Limited">
+		<meta name="keywords" content="sales dashboard, admin dashboard, bootstrap 4 admin template, html admin template, admin panel design, admin panel design, bootstrap 4 dashboard, admin panel template, html dashboard template, bootstrap admin panel, sales dashboard design, best sales dashboards, sales performance dashboard, html5 template, dashboard template">
+		<link rel="icon" href="assets/img/brand/favicon.ico" type="image/x-icon"/>
+		<title>Aurora Login</title>
+		<link href="assets/plugins/fontawesome-free/css/all.min.css" rel="stylesheet">
+		<link href="assets/plugins/ionicons/css/ionicons.min.css" rel="stylesheet">
+		<link href="assets/plugins/typicons.font/typicons.css" rel="stylesheet">
+		<link href="assets/plugins/feather/feather.css" rel="stylesheet">
+		<link href="assets/plugins/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+		<link href="assets/css/style.css" rel="stylesheet">
+		<link href="assets/css/custom-style.css" rel="stylesheet">
+		<link href="assets/css/skins.css" rel="stylesheet">
+		<link href="assets/css/dark-style.css" rel="stylesheet">
+		<link href="assets/css/custom-dark-style.css" rel="stylesheet">
+		<link href="assets/css/custom.css" rel="stylesheet">
+	</head>
 
-      ipc.on("auth-error", (e, status) => {
-        $("#auth-error").text(status);
-      });
-    </script>
-  </body>
+	<body class="main-body dark-theme login-body">
+
+		<div class="page ">
+
+			<div class="main-content pt-0">
+
+				<div class="container-fluid container-fluid-c">
+
+					<div class="row">
+						<div class="col-sm-12 col-md-5 col-xl-4 pl-0-c side-background">
+							<div class="card custom-card custom-card-c">
+								<div class="main-content-app main-content-app-c pt-0">
+									<div class="main-content-left main-content-left-chat">
+										<div class="card-body">
+											<div class="m-4">
+												<img src="./assets/img/svgs/logo.svg" alt="svg">
+											</div>
+											<div class="row">
+												<div class="col-10 d-block mx-auto ">
+													<div class="d-table d-table-c">
+														<div class="d-table-cell vertical-middle">
+															<h1 class="mb-5">Log In</h1>
+															<form>
+																<div class="form-group text-left mb-4">
+																	<label class="12">Licence Key</label>
+																	<input class="form-control" placeholder="Enter Licence Key" type="text">
+																</div>
+																<button class="btn ripple btn-pink btn-md btn-block">
+																	<i class="fe fe-check-circle"></i>&nbsp; Login to Aurora
+																</button>
+															</form>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="login-bottom">
+												<h6 class="text-center ">Forget Licence?
+													<span class="text-danger">Access Dashboard</span>
+												</h6>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-12 col-md-7 col-xl-8 pr-0-c">
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</body>
 </html>

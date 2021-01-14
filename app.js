@@ -16,15 +16,17 @@ let versionNumber = app.getVersion();
 
 const createWindow = () => {
   mainWindow = new BrowserWindow({
-    width: 1140,
-    height: 750,
+    width: 1516,
+    height: 947,
+    maxWidth: 1516,
+    maxHeight: 947,
     title: "StockCop",
     frame: false,
-    backgroundColor: "white",
+    backgroundColor: "#121229",
     webPreferences: {
       webSecurity: false,
       nodeIntegration: true,
-      devTools: false,
+      devTools: true,
     },
   });
 
@@ -53,8 +55,12 @@ const auth = () => {
 const createAuth = () => {
   authWindow = new BrowserWindow({
     parent: mainWindow,
-    width: 1140,
-    height: 750,
+    width: 1516,
+    height: 947,
+    maxWidth: 1516,
+    maxHeight: 947,
+    minWidth: 769,
+    minHeight: 450,
     frame: false,
     webPreferences: {
       webSecurity: true,
