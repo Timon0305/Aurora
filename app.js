@@ -21,7 +21,9 @@ const createWindow = () => {
     height: 947,
     maxWidth: 1516,
     maxHeight: 947,
-    title: "StockCop",
+    minWidth: 769,
+    minHeight: 450,
+    title: "Aurora",
     frame: false,
     backgroundColor: "#121229",
     webPreferences: {
